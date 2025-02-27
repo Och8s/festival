@@ -1,0 +1,204 @@
+body {
+    background-color: rgb(32, 30, 35);
+    color: white;
+    font-family: sans-serif;
+    padding: 0.625em; /* 10px */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625em; /* 10px */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1.25em; /* 20px */
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(224, 101, 224);
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.artista-cell {
+    padding: 0;
+}
+
+.artista {
+    background-size: cover;
+    background-position: center;
+    padding: 1.25em; /* 20px */
+    text-align: center;
+    color: white;
+    border-radius: 0.5em; /* 8px */
+    position: relative;
+    width: 12.5em; /* 200px */
+    height: 12.5em; /* 200px */
+    margin: 0.9375em auto; /* 15px */
+}
+
+.info-cell {
+    padding: 0.75em; /* 12px */
+    text-align: left;
+}
+
+fieldset {
+    margin-bottom: 1.25em; /* 20px */
+}
+
+#contacto {
+    text-align: right;
+    padding-right: 1.25em; /* 20px */
+}
+
+footer p {
+    text-align: center;
+    color: aqua;
+}
+
+#mas-artistas {
+    background-color: rgb(159, 197, 205);
+    padding-left: 1.875em; /* 30px */
+    padding-right: 1.875em; /* 30px */
+    color: black;
+    border: blue;
+    font-size: 1.25em; /* 20px */
+    border-radius: 1.5625em; /* 25px */
+    display: block;
+    margin: 1.25em auto; /* 20px */
+}
+
+#artistas {
+    text-align: center;
+}
+
+#festival {
+    display: flex;
+    align-items: center;
+    padding: 1.25em; /* 20px */
+    gap: 1.25em; /* 20px */
+}
+
+.cartel {
+    flex: 1;
+}
+
+.info-video {
+    flex: 2;
+}
+
+input {
+    padding: 0.3125em; /* 5px */
+    border-radius: 0.3125em; /* 5px */
+    margin-right: 0.3125em; /* 5px */
+}
+
+/* Aplicar el efecto de focus también a los inputs generales */
+input:focus, textarea:focus {
+    border: 0.125em solid #313a43; /* 2px */
+    outline: none;
+    background-color: #ecd5e6;
+}
+
+#audioPlayer {
+    height: 1.875em; /* 30px */
+}
+
+#audioPlayer::-webkit-media-controls-panel {
+    background: linear-gradient(to bottom, rgba(139, 184, 201, 0.7), rgb(139, 171, 203));
+    border-radius: 0.3125em; /* 5px */
+}
+
+h2 {
+    margin: 0;
+}
+
+#descripcion-video, #descripcion-audio {
+    font-size: 0.75em; /* 12px */
+}
+@media screen and (max-width: 48.75em) { /* 780px */
+    header {
+        flex-direction: column;
+    }
+    nav ul {
+        margin: 1em 0;
+    }
+    #festival {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cartel {
+        width: 90%;
+        margin: 1em auto;
+        text-align: center;
+        flex: none;
+        display: block; /* Asegura que sea un bloque completo */
+    }
+    .info-video {
+        width: 90%;
+        margin: 1em auto;
+        text-align: center;
+    }
+    .artista {
+        width: 80%;
+        display: block;
+    }
+    #contacto {
+        text-align: center;
+        padding-right: 0;
+    }
+    input {
+        width: 95%;
+    }
+
+    /* Modificaciones para la tabla en móviles */
+    table tbody tr {
+        display: block;
+        margin-bottom: 1em;
+    }
+    table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0.5em;
+    }
+    .artista-cell {
+        padding: 0;
+    }
+    #audioPlayer {
+        height: 1.875em;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 30em) { /* 480px */
+    .cartel {
+        width: 95%;
+    }
+}
